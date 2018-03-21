@@ -22,6 +22,7 @@ document.getElementById("pageNumber").innerHTML = pageNumber;
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
 
+
 document.getElementById("button").addEventListener("click", function () {
 
     if (document.getElementById("find1").value.trim() != "") {
@@ -33,10 +34,8 @@ document.getElementById("button").addEventListener("click", function () {
         var url = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=04473208e3848503ccf004271fdd0512&per_page=30&tags=" + searchTerm + "&tag_mode=all&page=" + pageNumber + "&extras=date_taken,tags&format=json&nojsoncallback=1"; //extras - dodatne vrednosti koje želim da mi api vrati
 
         fetch(proxyurl + url)
-            .then(response = > response.json()
-    )
-    .
-        then(json = > {
+            .then(response => response.json())
+    .then(json => {
 
             pagesTotal = json.photos.pages;
         //document.getElementById("pageNumberLast").innerHTML = pagesTotal;
@@ -52,6 +51,7 @@ document.getElementById("button").addEventListener("click", function () {
             imgTag.src = "https://farm" + json.photos.photo[i].farm + ".staticflickr.com/" + json.photos.photo[i].server + "/" + json.photos.photo[i].id + "_" + json.photos.photo[i].secret + "_q.jpg";
             imgTag.style.width = 200 + "px"
             imgTag.style.height = 200 + "px"
+
 
 
             linkTag.className = "block-50  right padd-0 item"
@@ -74,6 +74,7 @@ document.getElementById("button").addEventListener("click", function () {
             blockTags.appendChild(tags)
 
 
+
             //dateTaken
             var blockDateTaken = document.createElement("DIV");
             blockDateTaken.className = "block-50  item"
@@ -81,6 +82,7 @@ document.getElementById("button").addEventListener("click", function () {
             var dateTaken = document.createElement("H5")
             dateTaken.innerHTML = "Date taken: " + new Date(Date.parse(json.photos.photo[i].datetaken)).toLocaleString()
             dateTaken.style.color = "black"
+
 
 
             blockDateTaken.appendChild(dateTaken)
@@ -104,9 +106,8 @@ document.getElementById("button").addEventListener("click", function () {
 
     })
 
-    .
-        catch(() = > console.log("Can’t access " + url + " response. Blocked by browser?")
-    )
+    .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
+
 
 
     }

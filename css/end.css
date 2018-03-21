@@ -1,0 +1,159 @@
+
+*{ box-sizing:border-box; font-family:"Arial Narrow"; }
+
+
+/*klase za boje texta*/
+
+.white{ color:white }
+.red{ color:red }
+.green{ color:green }
+.blue{ color:blue }
+.grey{ color:grey }
+.yellow{ color:yellow }
+
+
+/*klase za pozadinske boje*/
+
+.bg-red{ background:red }
+.bg-green{ background:green }
+.bg-blue{ background:blue }
+.bg-grey{ background:grey }
+.bg-yellow{ background:yellow }
+
+.white-transparent{ background:rgba(255,255,255,0.5) }
+
+
+/*klase za bordere*/
+.border{ border:1px solid #ccc }
+.border-left{ border-left:1px solid #ccc }
+.border-right{ border-right:1px solid #ccc }
+.border-bottom{ border-bottom:1px solid #ccc }
+.border-top{ border-top:1px solid #ccc }
+
+/*klase za stilizovanje texta*/
+
+.bold{ font-weight:bold }
+.italic{ font-style:italic }
+.text-center {text-align:center}
+.text-left {text-align:left}
+.text-right {text-align:right}
+
+.block-10{
+width:10%;
+}
+.block-20{
+width:20%;
+}
+.block-25{
+width:25%;
+}
+.block-30{
+width:30%;
+}
+.block-33{
+width:33.333%;
+}
+.block-40{
+width:40%;
+}
+.block-50{
+width:50%;
+}
+.block-60{
+width:60%;
+}
+.block-70{
+width:70%;
+}
+.block-80{
+width:80%;
+}
+.block-90{
+width:90%;
+}
+.block-95{
+width:95%;
+}
+.block-100{
+width:100%;
+}
+.center-block-10{
+width:10%;
+}
+.center-block-20{
+width:20%;
+}
+.center-block-30{
+width:30%;
+}
+.center-block-50{
+width:50%;
+}
+.center-block-80{
+width:80%;
+}
+.center-block-960{
+max-width:960px;
+}
+.center-block-1200{
+max-width:1200px;
+}
+
+/*zajednicka svojstva za center blokove*/
+
+.center-block-10,.center-block-20,.center-block-30,.center-block-50, .center-block-80, .center-block-960, .center-block-1200{
+margin:auto;
+padding:20px;
+}
+
+/*zajednicka svojstva za float left blokove*/
+
+.block-10,.block-20, .block-25, .block-30,.block-33, .block-40, .block-50, .block-60, .block-70, .block-80, .block-90, .block-95, .block-100{
+float:left;
+padding:10px;
+text-align:center;
+}
+
+/*klasa za input polja u formi*/
+
+.form-field{
+width:100%;
+padding:10px;
+border:1px solid #ccc;
+border-radius:5px;
+background:rgba(255,255,255,0.9);
+}
+
+/*klase za odbijanje od ivica*/
+
+.top-10 {
+margin-top:10px;
+}
+.top-20 {
+margin-top:20px;
+}
+.top-50 {
+margin-top:50px;
+}
+.top-100 {
+margin-top:100px;
+}
+
+/*klase za ponistavanje paddinga koji je dat na svim blokovima*/
+
+.padd-top-0{
+padding-top:0;
+}
+.padd-0{
+padding:0;
+}
+
+/*klase za slike*/
+
+.responsive-img {
+max-width:100%;
+}
+
+/*float right*/
+
+.right {float: right}
